@@ -10,5 +10,3 @@ Point.prototype.getX = function() {
 Point.prototype.getY = function() {
     return this.y;
 };
-
-
