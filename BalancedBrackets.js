@@ -1,17 +1,14 @@
 function isBalanced(str) {
     if (str === '') return true;
 
-    str = str.split('');
-    const stack = [];
+    let a = str;
+    let b;
 
-    for (let i = 0; i < str.length; i++) {
-        if (str[i] === '[') {
-            stack.push('[');
-        } else if (str[i] === ']' && stack[stack.length - 1] === '[') {
-            stack.pop();
-        }
-    }
-    return stack.length === 0;
+    do {
+        b = a;
+        a = a.replace(/\[\]/g,'');
+    } while (a !== b);
+    return !a;
 };
 
-console.log(isBalanced("[]"));
+console.log(isBalanced('][]['));
