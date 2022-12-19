@@ -140,4 +140,4 @@ const points = [
     new Point(2, 2)
   ];
 
-console.log(mergeSort(points));
+console.log(points);
